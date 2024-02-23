@@ -1,46 +1,69 @@
-/* Створити селектор кнопки з округлими краями, задати фоновий градієнт */
-.button {
-  border-radius: 5px; /* Округліть кути кнопки на 5 пікселів */
-  background: var(
-    --Gradient,
-    linear-gradient(90deg, #2563eb 0.36%, #d946ef 201.02%)
-  ); /* Задайте фоновий градієнт для кнопки */
-  border: none; /* Видаліть межі кнопки */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
-.button a {
-  text-decoration: none;
-  color: #f9fafb;
-  font-size: 14px;
-  font-weight: 500;
-  transition: 0.3s ease;
+*,
+::before,
+::after {
+  box-sizing: border-box;
 }
 
-.button a:hover {
-  color: #cacaca;
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
 }
 
-/* Стилізувати фонове зображення та шрифт для сторінки */
+ul {
+  margin: 0;
+  padding-left: 0;
+}
+
 body {
-  background: url(../img/global__bg.png); /* Задайте фонове зображення для сторінки */
-  background-repeat: no-repeat; /* Забороніть повторення фонового зображення */
-  background-size: cover; /* Задайте розмір фонового зображення на всю ширину та висоту екрана */
-  background-position: center center; /* Задайте положення фонового зображення по центру сторінки */
-  font-family: "DM Sans"; /* Задайте шрифт для всього тексту на сторінці */
+  background: url(../img/global__bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
 }
 
-/* Стилізувати контейнер для розміщення елементів верхнього блоку */
 .container {
-  /* Задайте ширину контейнера 1158 пікселів */
-  /* Задайте внутрішній відступ зліва 15 пікселів */
-  /* Задайте внутрішній відступ справа 15 пікселів */
-  /* Задайте автоматичні зовнішні відступи для вирівнювання контейнера по центру */
-  outline: 2px solid red; /* Обведення контейнера червоним кольором для виділення */
+  width: 1158px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+  outline: 2px solid red;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.list {
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
 }
 
 /* Стилізувати верхній блок сторінки */
 header {
-  padding: 0px 24px;/* Задайте внутрішній відступ у 24 пікселів зверху та знизу */    
+  padding-bottom: 24px;/* Задайте внутрішній відступ у 24 пікселів зверху та знизу */ 
+  padding-top: 24px;   
 }
 
 
@@ -103,8 +126,8 @@ header {
 }
 
 .start-title {
-  /* Задайте градієнтний фон для тексту заголовка */
-  /* Зробіть фоновий градієнт видимим тільки в межах тексту */
+  background: linear(to right, purple, white);/* Задайте градієнтний фон для тексту заголовка */
+  -webkit-background-clip: text;/* Зробіть фоновий градієнт видимим тільки в межах тексту */
   /* Зробіть колір тексту прозорим для використання градієнту */
   /* Додайте тінь для створення об'ємного ефекту */
   /* Розмір шрифту 58px */
